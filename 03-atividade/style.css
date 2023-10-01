@@ -102,3 +102,20 @@ form input {
   max-width: 100%;
   max-height: 100%;
 }
+
+
+/*SIDE BAR*/
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -240px; /* A barra lateral começa fora da tela */
+  width: 250px; /* Largura da barra lateral quando visível */
+  height: 100%;
+  background-color: white; /* Cor de fundo da barra lateral */
+  overflow: hidden;
+  transition: left 0.3s ease; /* Transição suave da propriedade left */
+}
+
+#sidebar:hover {
+  left: 0; /* Quando o mouse passa sobre a barra lateral, ela se move para a esquerda */
+}

@@ -1,8 +1,30 @@
+let data = []
+
+function dataStore(list) {
+  let obj = {};
+  obj.name = list[0];
+  obj.username = list[1];
+  obj.email = list[2];
+  obj.ofAge = list[3];
+  data.push(obj);
+  console.log(data);
+}
+
+function sidebarSendData(list) {
+  const sidebar = document.querySelector('div#sidebar');
+  if(list.length != 0) {
+    const content = document.createElement('p');
+    content.innerText = `Username: ${list[1]}`;
+    sidebar.appendChild(content);
+    alert("Verifique os usuários cadastrados na barra branca ao lado!!!");
+  }
+}
+
 function age(ofAge) {
   if(ofAge == 'yes') {
-    return 'maior de idade, que legal cara'
+    return true;
   } else {
-    return 'menor de idade, nada legal cara'
+    return false;
   }
 }
 
@@ -34,9 +56,9 @@ function showFullscreenGif() {
   const fullscreenGifContainer = document.getElementById('fullscreenGifContainer');
   fullscreenGifContainer.style.display = 'flex'; // Exibe o elemento em tela inteira
 
-  /*setTimeout(function () {
+  setTimeout(function () {
     fullscreenGifContainer.style.display = 'none';
-  }, 5000);*/
+  }, 4000);
   return false;
 }
 
@@ -117,11 +139,16 @@ function displayInformation(list) {
   const div6 = document.querySelector('div#div-6');
   div6.appendChild(confirmBtn);
   div6.appendChild(deleteBtn);
+
   confirmBtn.addEventListener('click', function(event) {
     event.preventDefault()
     alert('Seu cadastro foi confirmado');
     showFullscreenGif();
+    dataStore(list);
+    sidebarSendData(list);
+    deletarForm();
   });
+
   deleteBtn.addEventListener('click', function() {
     deletarForm();
   })
@@ -132,14 +159,25 @@ function deletarForm() {
   displayForm.remove(); 
 }
 
+
+// main_______________________________________________
 const form = document.querySelector('form#inputs');
 form.addEventListener('submit', function(event) {
   event.preventDefault();
   const list = saveInfo();
   if (list != 0) {
-    console.log(list);
     displayInformation(list);
     form.reset();
   }
 });
 
+const triggerElement = document.getElementById('trigger-element'); // Substitua pelo elemento que você deseja usar como gatilho
+const sidebar = document.getElementById('sidebar');
+
+triggerElement.addEventListener('mouseenter', () => {
+  sidebar.style.left = '0';
+});
+
+sidebar.addEventListener('mouseleave', () => {
+  sidebar.style.left = '-240px';
+});
