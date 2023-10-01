@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/Captura_de_tela_2023-09-30_193341-removebg-preview.png" type="image/x-icon">
+  <title>Cadastro(vazio roxo)</title>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header></header>
+  <main>
+    <form id="inputs">
+      <div class="labelInput">
+        <label for="fullName"> Full Name:</label>
+        <input type="text" name="fullName">
+      </div>
+      <div class="labelInput">
+        <label for="userName">Username:</label>
+        <input type="text" name="userName">
+      </div>
+      <div class="labelInput">
+        <label for="email">Email:</label>
+        <input type="text" name="email">
+      </div>
+      <label for="ofAge">Maior de 18 anos:</label>
+      <div class="labelInput" style="display: block;">
+        <input type="radio" name="ofAge" value="yes" checked class="radio">Sim
+        <input type="radio" name="ofAge" value="no" class="radio">Não
+      </div>
+
+      <div class="labelInput">
+        <label for="agreed">Li e concordo com os termos</label>
+        <input type="checkbox" name="agreed" >
+      </div>
+      <a href="https://www.jusbrasil.com.br/modelos-pecas/modelo-termos-e-condicoes-para-site-ou-app/784909844" target="_blank" style="font-size: small; font-weight: lighter;">Termos e condições</a>
+
+      <div id="buttonDiv">
+        <input id="submitButton" type="submit">
+      </div>
+    </form>
+    
+  </main>
+
+  <div id="fullscreenGifContainer">
+    <img src="images/gojo-satoru-gojo.gif" alt="vazio roxo em tela inteira">
+  </div>
+  
+</body>
+</html>

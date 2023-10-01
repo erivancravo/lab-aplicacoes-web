@@ -1,0 +1,119 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin:0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+
+section {
+  padding: 20px;
+  background-color: #0e6bad;
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 1;
+}
+
+#links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 1;
+  background-color: #4bb4ff;
+  color: white;
+}
+
+#left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  color: white;
+}
+
+#right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+#mahito {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+
+form {
+  padding: 10px;
+  background-color: #eaeaeb;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 5px 5px;
+}
+
+#foo {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.gostaveis {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.text-box {
+  border: none;
+}
+
+.link-btn {
+  text-shadow: 3px 1px black;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.link-btn:hover {
+  background-color: #7bc2f5;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: darkgray;
+  margin: 0;
+  justify-content: space-evenly;
+}
+
+button {
+  background-color: #0e6bad;
+  font-weight: bold;
+  border: none;
+  color: white;
+  height: 30px;
+  border-radius: 2px;
+  box-shadow: 2px 2px black;
+}
+
+footer {
+  text-align: center;
+  font-weight: bold;
+  color: darkgray;
+}
+
+label {
+  font-weight: bolder;
+  color: grey;
+}

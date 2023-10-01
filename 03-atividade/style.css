@@ -1,0 +1,104 @@
+* {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bolder;
+}
+
+header {
+  background-color: rgb(71, 2, 71);
+  height: 50px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: purple;
+  min-height: 100vh;
+}
+
+form {
+  color: rgb(71, 2, 71);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 7px 7px black;
+  background-color: rgb(243, 154, 243);
+}
+
+form input {
+  margin: 5px;
+  border: 1px solid rgb(187, 187, 187);
+  border-radius: 3px;
+  box-sizing: 3px 3px;
+}
+
+.labelInput {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+#buttonDiv {
+  display: flex;
+  justify-content: center;
+}
+
+#displayForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#submitButton, .btn {
+  margin-top: 15px;
+  border-radius: 3px;
+  border: 1px solid black;
+  background-color: purple;
+  color: white;
+  cursor: pointer;
+  box-shadow: 3px 3px black;
+}
+
+.radio {
+  cursor: pointer;
+}
+
+#div-6 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.displayDiv {
+  display: flex;
+  justify-content: space-between;
+  width:initial;
+  width: 100%;
+  margin: 5px;
+}
+
+
+
+/* GIF */
+#fullscreenGifContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: purple; /* Fundo semi-transparente */
+  display: none; /* Inicialmente oculto */
+  justify-content: center;
+  align-items: center;
+}
+
+.whiteLB {
+  color: white;
+}
+#fullscreenGifContainer img {
+  max-width: 100%;
+  max-height: 100%;
+}
